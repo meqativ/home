@@ -55,8 +55,9 @@ onlyfans_btn.addEventListener("click", () => {
 	if (last) clearTimeout(last);
 	if (age) updateAge(age);
 	if (!age || age.innerText > 18) return window.open("https://media.tenor.com/iHAv4WoNo2kAAAAC/gotcha-bitch.gif");
+	age["scrollIntoViewIfNeeded" in age ? "scrollIntoViewIfNeeded" : "scrollIntoView"]
+			({ behavior: "smooth", block: "start" })
 	if (font_size < 8) return (age.style = `font-size: ${(font_size *= 4)}rem;`);
-
 	age.style.animation = "look 2s";
 	age.addEventListener(
 		"animationend",

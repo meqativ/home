@@ -151,7 +151,7 @@ src_btn.style.height = "0px";
 src_btn.setAttribute("tabindex", "-1");
 lib_text.setAttribute("tabindex", "0");
 lib_text.classList.add("pointer");
-lib_text.innerHTML = lib_text.innerHTML + "<br/>click me"
+lib_text.innerHTML = lib_text.innerHTML + "<br/>press me"
 lib_text.addEventListener("click", showSourceCodeButton);
 lib_text.addEventListener("keyup", enter_handle);
 // remove ad banner

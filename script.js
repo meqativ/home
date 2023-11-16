@@ -1,6 +1,3 @@
-document.addEventListener("keyup", (e) => {
-  if ((e.keyCode ? e.keyCode : e.which) == '13' && document.activeElement) document.activeElement.click(e);
-})
 function wait(ms) { return new Promise(res => setTimeout(res, ms)); }
 
 // https://stackoverflow.com/questions/24969383
@@ -152,7 +149,7 @@ src_btn.style.height = "0px";
 src_btn.setAttribute("tabindex", "-1");
 lib_text.setAttribute("tabindex", "0")
 lib_text.classList.add("pointer")
-lib_text.innerHTML = lib_text.innerHTML + "<br/>press me"
+lib_text.innerHTML = lib_text.innerHTML + "<br/>click me"
 lib_text.addEventListener("click", showSourceCodeButton);
 
 // remove ad banner

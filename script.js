@@ -1,4 +1,8 @@
-function keyup_handle(e) { if ((e.keyCode ? e.keyCode : e.which) == '13' && document.activeElement) document.activeElement.click(e); }
+function create_enter_handle(element) {
+ return (e) => {
+   if ((e.keyCode ? e.keyCode : e.which) == '13' && document.activeElement === element) document.activeElement.click(e);
+  }
+ }
 function wait(ms) { return new Promise(res => setTimeout(res, ms)); }
 
 // https://stackoverflow.com/questions/24969383
@@ -130,7 +134,7 @@ x_btn.addEventListener("click", async () => {
 
 const lib_text = document.getElementById("lib_text"), 
   src_btn	= document.getElementById("src_btn");
-
+let lib_text_enter_handle = create_enter_handle(lib_text)
 function showSourceCodeButton(e) {
 	absorbEvent(e);
 	src_btn.style.opacity = "";
@@ -142,7 +146,7 @@ function showSourceCodeButton(e) {
 	lib_text.innerText = "made with no libraries";
 	lib_text.classList.remove("pointer");
 	lib_text.removeEventListener("click", showSourceCodeButton);
-  lib_text.removeEventListener("keyup", enter_handle);
+  document.removeEventListener("keyup", lib_text_enter_handle);
   lib_text.setAttribute("tabindex", "");
 };
 src_btn.style.opacity = "0";
@@ -153,7 +157,7 @@ lib_text.setAttribute("tabindex", "0");
 lib_text.classList.add("pointer");
 lib_text.innerHTML = lib_text.innerHTML + "<br/>press me"
 lib_text.addEventListener("click", showSourceCodeButton);
-lib_text.addEventListener("keyup", enter_handle);
+document.addEventListener("keyup", lib_text_enter_handle);
 // remove ad banner
 (async ()=>{
 		while (window.location.hostname === "meqativ.tiiny.site") {

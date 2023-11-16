@@ -1,4 +1,4 @@
-@import url("/modules/scrollbars.css");
+@import url("./modules/scrollbars.css");
 div[style="position: fixed !important; bottom: 0% !important; width: 100% !important; height: 55px !important; z-index: 9999 !important;"] {
 	display: none !important;
 }

@@ -2,6 +2,15 @@
 div[style="position: fixed !important; bottom: 0% !important; width: 100% !important; height: 55px !important; z-index: 9999 !important;"] {
 	display: none !important;
 }
+img {
+  max-width: 100%;
+  height: auto;
+  vertical-align: middle;
+  font-style: italic;
+  background-repeat: no-repeat;
+  background-size: cover;
+  shape-margin: .75rem;
+}
 :root {
 	--scrollbar-width: .8rem;
 	--scrollbar-track-base: transparent;

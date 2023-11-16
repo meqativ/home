@@ -17,9 +17,18 @@ img {
 
 }
 @media (prefers-color-scheme: dark) {
+  img#code {
+    filter: invert(1); 
+  }
 	:root {
 		--scrollbar-thumb-base: hsl(0, 0%, 25%, .6);
 		--scrollbar-thumb-hover: hsl(0, 0%, 25%, .8);
+	}
+}
+@media (prefers-color-scheme: light) {
+  :root {
+		--scrollbar-thumb-base: hsl(0, 0%, 75%, .6);
+		--scrollbar-thumb-hover: hsl(0, 0%, 75%, .8);
 	}
 }
 @keyframes look {
@@ -30,17 +39,15 @@ img {
 		border: 1rem solid rgba(125, 0, 255, .9);
 	}
 }
+img#code {
+  width: 1rem;
+}
 #lib_text {
-	opacity: .2;
+  text-align: center;
+  opacity: .2;
 }
 #lib_text::selection {
 	background: rgba(125, 0, 255, 1);
-}
-@media (prefers-color-scheme: light) {
-	:root {
-		--scrollbar-thumb-base: hsl(0, 0%, 75%, .6);
-		--scrollbar-thumb-hover: hsl(0, 0%, 75%, .8);
-	}
 }
 .pointer {
 	cursor: pointer;

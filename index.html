@@ -15,7 +15,7 @@
 	</head>
 	<body>
 		<main>
-			<h6 id="lib_text">made with no libraries</h6>
+			<h6 tabindex="0" id="lib_text">made with no libraries</h6>
 			<h1 class="title" translate="no">meqativ</h1>
 			<div class="pfp">
 				<img tabindex="0" class="avatar" alt="avatar" src="./assets/avatar.png"/>
@@ -30,6 +30,18 @@
         document.currentScript.remove();
 			</script>
 			<ul class="buttons">
+				<a href="https://github.com/Meqativ/home">
+					<button id="src_btn" title="Source code of this page">
+						<div class="logo_container">
+							<picture>
+								<source srcset="./assets/github/white/logo.svg" media="(prefers-color-scheme: dark)"/>
+								<img draggable="false" src="./assets/github/black/logo.svg"/>
+							</picture>
+						</div>
+						<img id="code" draggable="false" src="./assets/github/code.svg" />
+						<h3 translate="yes">source code</h3>
+					</button>
+				</a>
 				<a href="https://youtube.com/@meqativ">
 					<button title="YouTube channel">
 						<div class="logo_container">

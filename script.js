@@ -127,24 +127,29 @@ x_btn.addEventListener("click", async () => {
 	x_btn.remove();
 });
 
-/*
 const lib_text = document.getElementById("lib_text"), 
-    src_btn	= document.getElementById("src_btn");
+  src_btn	= document.getElementById("src_btn");
 
-		function showSourceCodeButton(e) {
-			absorbEvent(e);
-			src_btn.style.opacity = "";
-			src_btn.style.position = "";
-			src_btn.style.height = "3rem";
-
-			lib_text.innerText = "made with no libraries"
-			lib_text.classList.remove("pointer")
-			lib_text.removeEventListener("click", showSourceCodeButton);
-		};
-		lib_text.classList.add("pointer")
-		lib_text.innerHTML = lib_text.innerHTML + "<br/>click me"
-		lib_text.addEventListener("click", showSourceCodeButton);
-*/
+function showSourceCodeButton(e) {
+	absorbEvent(e);
+	src_btn.style.opacity = "";
+	src_btn.style.position = "";
+	src_btn.style.height = "";
+  src_btn.setAttribute("tabindex", "0");
+  src_btn.focus()
+  
+	lib_text.innerText = "made with no libraries"
+	lib_text.classList.remove("pointer")
+	lib_text.removeEventListener("click", showSourceCodeButton);
+  lib_text.setAttribute("tabindex", "")
+};
+src_btn.style.opacity = "0";
+src_btn.style.position = "absolute";
+src_btn.style.height = "0px";
+src_btn.setAttribute("tabindex", "-1");
+lib_text.classList.add("pointer")
+lib_text.innerHTML = lib_text.innerHTML + "<br/>click me"
+lib_text.addEventListener("click", showSourceCodeButton);
 
 // remove ad banner
 (async ()=>{

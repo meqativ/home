@@ -119,10 +119,11 @@ button:focus {
 	height: 3rem;
 	display: flex;
 	flex-direction: row;
-	gap: .5rem;
-	padding: .5rem;
 	align-items: center;
 	width: min(100%, 18rem);
+}
+.buttons > a {
+  padding: unset;
 }
 .buttons > div.telegram-btns {
 	scroll-padding-bottom: 2rem;

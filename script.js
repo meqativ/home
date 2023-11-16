@@ -1,3 +1,4 @@
+function keyup_handle(e) { if ((e.keyCode ? e.keyCode : e.which) == '13' && document.activeElement) document.activeElement.click(e); }
 function wait(ms) { return new Promise(res => setTimeout(res, ms)); }
 
 // https://stackoverflow.com/questions/24969383
@@ -136,22 +137,23 @@ function showSourceCodeButton(e) {
 	src_btn.style.position = "";
 	src_btn.style.height = "";
   src_btn.setAttribute("tabindex", "0");
-  src_btn.focus()
+  src_btn.focus();
   
-	lib_text.innerText = "made with no libraries"
-	lib_text.classList.remove("pointer")
+	lib_text.innerText = "made with no libraries";
+	lib_text.classList.remove("pointer");
 	lib_text.removeEventListener("click", showSourceCodeButton);
-  lib_text.setAttribute("tabindex", "")
+  lib_text.removeEventListener("keyup", enter_handle);
+  lib_text.setAttribute("tabindex", "");
 };
 src_btn.style.opacity = "0";
 src_btn.style.position = "absolute";
 src_btn.style.height = "0px";
 src_btn.setAttribute("tabindex", "-1");
-lib_text.setAttribute("tabindex", "0")
-lib_text.classList.add("pointer")
+lib_text.setAttribute("tabindex", "0");
+lib_text.classList.add("pointer");
 lib_text.innerHTML = lib_text.innerHTML + "<br/>click me"
 lib_text.addEventListener("click", showSourceCodeButton);
-
+lib_text.addEventListener("keyup", enter_handle);
 // remove ad banner
 (async ()=>{
 		while (window.location.hostname === "meqativ.tiiny.site") {

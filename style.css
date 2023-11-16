@@ -1,0 +1,243 @@
+@import url("/modules/scrollbars.css");
+div[style="position: fixed !important; bottom: 0% !important; width: 100% !important; height: 55px !important; z-index: 9999 !important;"] {
+	display: none !important;
+}
+:root {
+	--scrollbar-width: .8rem;
+	--scrollbar-track-base: transparent;
+
+}
+@media (prefers-color-scheme: dark) {
+	:root {
+		--scrollbar-thumb-base: hsl(0, 0%, 25%, .6);
+		--scrollbar-thumb-hover: hsl(0, 0%, 25%, .8);
+	}
+}
+@keyframes look {
+	0%, 100% {
+		border-color: transparent;
+	}
+	20%, 80% {
+		border: 1rem solid rgba(125, 0, 255, .9);
+	}
+}
+#lib_text {
+	opacity: .2;
+}
+#lib_text::selection {
+	background: rgba(125, 0, 255, 1);
+}
+@media (prefers-color-scheme: light) {
+	:root {
+		--scrollbar-thumb-base: hsl(0, 0%, 75%, .6);
+		--scrollbar-thumb-hover: hsl(0, 0%, 75%, .8);
+	}
+}
+.pointer {
+	cursor: pointer;
+}
+::selection {
+	background: rgba(125, 0, 255, .2);
+}
+img {
+	user-select: none;
+}
+h1, h2, h3, h4, h5, h6 {
+	text-align: center;
+	webkit-appearance: none;
+}
+.title {
+	margin-top: 3%;
+}	
+
+* {
+  transition: all 0.25s ease-in;
+  -webkit-tap-highlight-color: transparent;
+  font-family: 'Noto Sans Mono', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+font {
+	transition: font-size 0s;
+} /* funny google chrome translation shitcode */
+*:focus-visible {
+	outline: .2rem solid #8800ff;
+	outline-offset: .2rem;
+}
+main {
+  display: flex;
+  justify-content: center;
+  flex-wrap: nowrap;
+  flex-direction: column;
+  align-items: center
+}
+
+h3#js_warning {
+	color: yellow;
+	text-align: center;
+}
+button {
+	background: none transparent;
+	background-color: #4400ff22;
+	border: #4400ff solid 1px;
+	border-radius: 0.5rem;
+}
+button:hover {
+	scale: 1.05;
+}
+button:focus {
+	scale: 1.1;
+}
+
+.buttons {
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	padding: .5rem;
+	gap: .3rem;
+}
+.buttons > button, .buttons > a button, .buttons > a {
+	gap: .5rem;
+	padding: .5rem;
+	white-space: normal;
+	scroll-padding-left: 0;
+	text-align: left;
+	height: 3rem;
+	display: flex;
+	flex-direction: row;
+	gap: .5rem;
+	padding: .5rem;
+	align-items: center;
+	width: min(100%, 18rem);
+}
+.buttons > div.telegram-btns {
+	scroll-padding-bottom: 2rem;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: center;
+	gap: .5rem;
+	height: 0;
+	max-height: 0;
+	transition: all 0.5s ease;
+}
+.buttons #tg {
+	justify-content: space-between;
+}
+.buttons #tg div.pointer {
+	font-size: 2.5rem;
+	height: 100%;
+	aspect-ratio: 1/1;
+}
+#x > h3 {
+	width: 100%;
+	text-align: start;
+}
+#x > div.pointer {
+	font-size: 1.5rem;
+	align-self: flex-start;
+	margin-top: 0.5rem;
+	height: 1rem;
+	width: 1rem;
+}
+.buttons a button h3 {
+	text-align: start;
+	width: 100%;
+	cursor: pointer;
+}
+div.telegram-btns {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+  transition: max-height ease-in .25s;
+}
+div.telegram-btns[closed="false"] {
+  max-height: 5rem;
+  height: 5rem;
+  & button { padding-top: .5rem; padding-bottom: .5rem; }
+}
+div.telegram-btns[closed="true"] {
+	& button { padding-top: 0px; padding-bottom: 0px; }
+  max-height: 0px;
+  height: 0px;
+}
+div.telegram-btns button {
+	gap: .5rem;
+	padding: .5rem;
+	justify-content: space-evenly;
+	height: 100%;
+	width: fit-content;
+	cursor: pointer;
+}
+div.telegram-btns button:disabled {
+	cursor: default;
+}       
+
+button:disabled div.logo_container  {
+	opacity: 1;
+}
+button:disabled div.logo_container {
+	opacity: 0;
+}
+div.logo_container {
+	height: min(100%, 3rem);
+	max-height: 3rem;
+	display: flex;
+	flex-direction: row;
+	gap: .25rem;
+	align-items: center;
+	justify-content: space-evenly;
+}
+div.logo_container img.round {
+	border-radius: 18%;
+}
+img.fold {
+	-webkit-user-select: none; /* disable selection/copy of UIWebView */
+	-webkit-touch-callout: none; /* disable the popup when long-pressing on a link */
+}
+div.logo_container img, 
+div.logo_container picture {
+	width: 2rem;
+	height: min(100%, 2rem);
+	object-fit: contain;
+}
+
+.pfp {
+	text-align: center;
+	-webkit-border-radius: 15%;
+	-moz-border-radius: 15%;
+	border-radius: 15%;
+	-khtml-border-radius: 15%;
+}	
+.pfp > img.avatar {
+	border-radius: inherit;
+	object-fit: contain;
+	width: min(100%, 10rem); 
+	height: 10rem;
+	
+	backdrop-filter: blur(4px);
+	transition: scale ease-in-out .5s; 
+}
+
+.pfp img.avatar:hover, .pfp img.avatar:focus {
+	scale: 1.8;
+}
+span#age {
+	border-radius: 100%;
+	box-sizing: content-box;
+}
+span#strikethrough {
+	text-decoration: line-through;
+}
+span#ua_flag img {
+	background-color: transparent;
+	user-select: none;
+	width: 2rem;
+	height: 1.5rem;
+	margin-bottom: -.3rem;
+	border-radius: .5rem;
+}

@@ -1,0 +1,22 @@
+::-webkit-scrollbar {
+	width: var(--scrollbar-width);
+	border-radius: 5px;
+}
+::-webkit-scrollbar-track {
+	background: var(--scrollbar-track-base);
+	backdrop-filter: blur(8px);
+	border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+	background: var(--scrollbar-thumb);
+	box-shadow: inset 0 0 var(--scrollbar-width) var(--scrollbar-width) var(--scrollbar-thumb-base);
+	border: solid .15rem var(--scrollbar-track-base, var(--scrollbar-track-base-o));
+	border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+	background: var(--scrollbar-thumb-hover);
+	box-shadow: inset 0 0 var(--scrollbar-width) var(--scrollbar-width) var(--scrollbar-thumb-hover);
+	border-width: 0px;
+}

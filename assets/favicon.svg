@@ -1,0 +1,4 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewbox="0 0 64 64">
+  <rect width="100%" height="100%" fill="rgb(125 0 255)" rx="25%"></rect>
+  <text x="50%" y="70%" font-weight="bold" font-family="Noto Sans Mono, monospace, noto mono" font-size="450%" fill="white" text-anchor="middle" alignment-baseline="central">M</text>
+</svg>

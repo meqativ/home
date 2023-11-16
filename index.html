@@ -3,10 +3,10 @@
 	<head>
 	  <script preload type="module" defer src="script.js"></script>
     <link preload href="https://fonts.googleapis.com/css2?family=Noto+Sans&family=Noto+Sans+Mono:wght@300&display=swap" rel="stylesheet">
-  	<link preload href="/assets/favicon.svg" rel="icon" type="image/svg+xml" />
+  	<link preload href="./assets/favicon.svg" rel="icon" type="image/svg+xml" />
 		<link preload href="style.css" rel="stylesheet" type="text/css" />
 		<meta property="og:title" content="meqativ"/>
-		<meta property="og:image" content="/assets/avatar.png" />
+		<meta property="og:image" content="./assets/avatar.png" />
 		<meta name="theme-color" content="#8800ff" />
 		<meta name="color-scheme" content="dark light" />
 		<meta name="viewport" content="height=device-height, width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
@@ -18,22 +18,22 @@
 			<h6 id="lib_text">made with no libraries</h6>
 			<h1 class="title" translate="no">meqativ</h1>
 			<div class="pfp">
-				<img tabindex="0" class="avatar" alt="avatar" src="/assets/avatar.png"/>
+				<img tabindex="0" class="avatar" alt="avatar" src="./assets/avatar.png"/>
 			</div>
 			<h3 tabindex="0" id="bio">
-				<span translate="no" id="ua_flag"><img draggable="false" alt="Ukrainian flag" src="/assets/ukrainian_flag.svg"/></span>Ukrainian born in 2007
+				<span translate="no" id="ua_flag"><img draggable="false" alt="Ukrainian flag" src="./assets/ukrainian_flag.svg"/></span>Ukrainian born in 2007
 			</h3>
 			<h2 id="stuff_title" class="title">my stuff</h2>
 			<h3 id="js_warning">Enable JavaScript for extended button functionality</h3>
 			<script>
 				document.querySelector("h3#js_warning").remove();
+        document.currentScript.remove();
 			</script>
 			<ul class="buttons">
 				<a href="https://youtube.com/@meqativ">
-					<!-- A little cluttered i kno -->
-					<button title="YouTube channel"onclick="window.open(`https://youtube.com/@meqativ`)">
+					<button title="YouTube channel">
 						<div class="logo_container">
-							<img draggable="false" src="/assets/youtube/logo.svg" />
+							<img draggable="false" src="./assets/youtube/logo.svg" />
 						</div>
 						<h3 translate="no">youtube</h3>
 					</button>
@@ -41,7 +41,7 @@
 				<a href="https://odysee.com/@meqativ:9">
 					<button title="Odysee channel">
 						<div class="logo_container">
-							<img draggable="false" src="/assets/odysee/logo_2023.png" />
+							<img draggable="false" src="./assets/odysee/logo_2023.png" />
 						</div>
 						<h3 translate="no">odysee</h3>
 					</button>
@@ -49,7 +49,7 @@
 				<a href="https://twitch.com/meqativ">
 					<button title="Twitch account">
 						<div class="logo_container">
-							<img draggable="false" src="/assets/twitch/logo.svg" />
+							<img draggable="false" src="./assets/twitch/logo.svg" />
 						</div>
 						<h3 translate="no">twitch</h3>
 					</button>
@@ -57,7 +57,7 @@
 				<a href="https://twitter.com/meqativ">
 					<button title="Twitter account" id="x">
 						<div class="logo_container">
-							<img draggable="false" src="/assets/x/logo_old.png" />
+							<img draggable="false" src="./assets/x/logo_old.png" />
 						</div>
 						<h3 translate="no"><span translate="no" id="strikethrough">twitter</span> x</h3>
 						<div translate="no" tabindex="0" role="button" title="Close button" aria-pressed="false" style="display: none;" class="logo_container pointer">
@@ -70,7 +70,7 @@
 					<button title="Discord user profile. Slow response time, even if you're able to send a message. preferably use telegram">
 						<div class="logo_container">
 							<picture>
-								<img draggable="false" src="/assets/discord/blurple/logo.svg" />
+								<img draggable="false" src="./assets/discord/blurple/logo.svg" />
 							</picture>
 						</div>
 						<h3 translate="no">discord</h3>
@@ -79,7 +79,7 @@
 				<a href="https://last.fm/user/meqativ">
 					<button title="Last.fm profile">
 						<div class="logo_container">
-							<img draggable="false" src="/assets/last.fm/logo.png" />
+							<img draggable="false" src="./assets/last.fm/logo.png" />
 						</div>
 						<h3 translate="no">last.fm</h3>
 					</button>
@@ -87,7 +87,7 @@
 				<a href="https://rooflomg.newgrounds.com/">
 					<button title="Newgrounds page">
 						<div class="logo_container">
-							<img draggable="false" class="round" src="/assets/newgrounds/logo.png" />
+							<img draggable="false" class="round" src="./assets/newgrounds/logo.png" />
 						</div>
 						<h3 translate="no">newgrounds</h3>
 					</button>
@@ -96,8 +96,8 @@
 					<button title="Bandcamp listener profile">
 						<div class="logo_container">
 							<picture>
-								<source draggable="false" srcset="/assets/bandcamp/aqua/logo.png" media="(prefers-color-scheme: dark)"/>
-								<img draggable="false" src="/assets/bandcamp/black/logo.png"/>
+								<source draggable="false" srcset="./assets/bandcamp/aqua/logo.png" media="(prefers-color-scheme: dark)"/>
+								<img draggable="false" src="./assets/bandcamp/black/logo.png"/>
 							</picture>
 						</div>
 						<h3 style="text-transform: lowercase;" translate="no">bandcamp <span translate="yes">listener</span></h3>
@@ -107,8 +107,8 @@
 					<button title="Github account">
 						<div class="logo_container">
 							<picture>
-								<source srcset="/assets/github/white/logo.svg" media="(prefers-color-scheme: dark)"/>
-								<img draggable="false" src="/assets/github/black/logo.svg"/>
+								<source srcset="./assets/github/white/logo.svg" media="(prefers-color-scheme: dark)"/>
+								<img draggable="false" src="./assets/github/black/logo.svg"/>
 							</picture>
 						</div>
 						<h3 translate="no">github</h3>
@@ -117,7 +117,7 @@
 				<a href="https://instagram.com/meqativ_">
 					<button title="Instagram profile. I dont use it often, it just exists.. Don't expect a reply from me there">
 						<div class="logo_container">
-							<img draggable="false" class="round" src="/assets/instagram/logo.svg" />
+							<img draggable="false" class="round" src="./assets/instagram/logo.svg" />
 						</div>
 						<h3 translate="no">instagram</h3>
 					</button>
@@ -125,7 +125,7 @@
 				<a href="https://lazer.ppy.sh/users/33649721/mania">
 					<button title="Osu player profile">
 						<div class="logo_container">
-							<img draggable="false" class="round" src="/assets/osu/logo.png" />
+							<img draggable="false" class="round" src="./assets/osu/logo.png" />
 						</div>
 						<h3 translate="no">osu!profile</h3>
 					</button>
@@ -133,7 +133,7 @@
 				<a href="https://gdbrowser.com/u/meqativ">
 					<button title="Geometry Dash account on GD Browser">
 						<div class="logo_container">
-							<img draggable="false" class="round" src="/assets/gd/logo_2.1.png" />
+							<img draggable="false" class="round" src="./assets/gd/logo_2.1.png" />
 						</div>
 						<h3 translate="no">geometry dash</h3>
 					</button>
@@ -141,21 +141,21 @@
 				<a href="https://nebo.mobi/tower/id/20284549">
 					<button title="Небоскрёб в игре Небоскрёбы">
 						<div class="logo_container">
-							<img draggable="false" class="round" src="/assets/nebosrkeby/logo.png" />
+							<img draggable="false" class="round" src="./assets/nebosrkeby/logo.png" />
 						</div>
 						<h3 translate="no">небоскрёбы</h3>
 					</button>
 				</a>
 				<button title="OnlyFans page" id="onlyfans" style="display: none;">
 					<div class="logo_container">
-						<img draggable="false" src="/assets/onlyfans/blue/logo.svg" />
+						<img draggable="false" src="./assets/onlyfans/blue/logo.svg" />
 					</div>
 					<h3 translate="no">onlyfans</h3>
 				</button>
 				<a href="https://t.me/paketmeqa/1482">
 					<button id="tg" title="Telegram channel">
 						<div class="logo_container">
-							<img draggable="false" src="/assets/telegram/logo.svg" />
+							<img draggable="false" src="./assets/telegram/logo.svg" />
 						</div>
 						<h3 translate="no" style="width: 100%; opacity: 1;">telegram</h3>
 						<h3 style="width: 0px; opacity: 0; text-align: center; font-size: 0px;">channel</h3>
@@ -166,7 +166,7 @@
 					<button title="Telegram profile" disabled onclick="window.open(`https://t.me/meqativ`)">
 						<h3>profile</h3>
 						<div class="logo_container">
-							<img draggable="false" class="round" src="/assets/avatar.png" />
+							<img draggable="false" class="round" src="./assets/avatar.png" />
 						</div>
 					</button>
 					<button title="Telegram language pack" disabled onclick="window.open(`https://t.me/setlanguage/meqalang`)">

@@ -39,7 +39,7 @@ const bio_elem = document.querySelector("h3#bio");
 
 // passing true to element basically makes the function b called getAge
 function updateAge(element) {
-	const age = ~~((new Date() - new Date("2007-03-13T08:25:00")) / (1000 * 60 * 60 * 24 * 365.25));
+	const age = ~~((new Date() - new Date("2007-03-13T08:25:00+0200")) / (1000 * 60 * 60 * 24 * 365.25));
 	if (element === true) return age;
 	
 	if (element) return (element.innerText = age);

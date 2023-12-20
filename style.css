@@ -20,6 +20,9 @@ img {
   img#code {
     filter: invert(1); 
   }
+	body {
+		background-color: #000;
+	}
 	:root {
 		--scrollbar-thumb-base: hsl(0, 0%, 25%, .6);
 		--scrollbar-thumb-hover: hsl(0, 0%, 25%, .8);

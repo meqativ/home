@@ -24,8 +24,7 @@ function unwrapAnchorButton(anchor) {
   const link = anchor.getAttribute("href");
   if (button.nodeName && button.nodeName.toLowerCase() !== 'button') return;
   if (link !== "#") {
-    button.setAttribute("data-link", link)
-    button.addEventListener("click", () => window.open(button.getAttribute("data-link")));
+    button.setAttribute("onclick", `window.open(${JSON.stringify(link)})`);
   }
   anchor.replaceWith(button);
 }

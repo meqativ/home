@@ -14,30 +14,26 @@ function absorbEvent(event) {
 	return false;
 }
 
+// if js is enabled in the browser replace all of the <a></a> elements with a button that was inside it 
+document.querySelectorAll(".buttons > a").forEach(unwrapAnchorButton)
+
 function unwrapAnchorButton(anchor) {
 	const { 
 		children: [button], 
-		href: link 
 	} = anchor;
-
-	button.setAttribute("onclick", `window.open(${JSON.stringify(link)})`);
-	anchor.replaceWith(button);
+  const link = anchor.getAttribute("href");
+  if (button.nodeName && button.nodeName.toLowerCase() !== 'button') return;
+  if (link !== "#") {
+    button.setAttribute("data-link", link)
+    button.addEventListener("click", () => window.open(button.getAttribute("data-link")));
+  }
+  anchor.replaceWith(button);
 }
 
-// if js is enabled in the browser replace all of the <a></a> elements with a button that was inside it 
-document.querySelectorAll(".buttons > a").forEach(function unwrapAnchorButton(anchor) {
-	const { 
-		children: [button], 
-		href: link 
-	} = anchor;
-    if (button.nodeName && button.nodeName.toLowerCase() !== 'button') return;
-	button.setAttribute("onclick", `window.open(${JSON.stringify(link)})`);
-	anchor.replaceWith(button);
-})
 
 const bio_elem = document.querySelector("h3#bio");
 
-// passing true to element basically makes the function b called getAge
+// passing true to element makes it return the age
 function updateAge(element) {
 	const age = ~~((new Date() - new Date("2007-03-13T08:25:00+0200")) / (1000 * 60 * 60 * 24 * 365.25));
 	if (element === true) return age;
@@ -158,6 +154,21 @@ lib_text.classList.add("pointer");
 lib_text.innerHTML = lib_text.innerHTML + "<br/>press me"
 lib_text.addEventListener("click", showSourceCodeButton);
 document.addEventListener("keyup", lib_text_enter_handle);
+
+// FIRE IN THE HOLE !!!!!!!!!!!!!!!!!!!!
+window.loadedSound = new Audio("./assets/sfx/Fire_in_the_hole_(ID4451).ogg");
+loadedSound.load()
+
+document.querySelectorAll("button#fireinthehole")
+  .forEach(button => button.addEventListener("click", async () => {
+    window.loadedSound.play()
+
+    window.loadedSound = window.loadedSound.cloneNode();
+    window.loadedSound.load()  
+  })
+  );
+
+
 // remove ad banner
 (async ()=>{
 		while (window.location.hostname === "meqativ.tiiny.site") {

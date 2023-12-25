@@ -167,21 +167,3 @@ document.querySelectorAll("button#fireinthehole")
     window.loadedSound.load()  
   })
   );
-
-
-// remove ad banner
-(async ()=>{
-		while (window.location.hostname === "meqativ.tiiny.site") {
-				const elem = document.querySelector(`div[style="position: fixed !important; bottom: 0% !important; width: 100% !important; height: 55px !important; z-index: 9999 !important;"]`)
-
-				if (elem) {
-						document.body.style = "";
-						document.querySelector(`head > script[type="text/javascript"]`).remove()
-						document.querySelector(`head > script[data-domain="meqativ.tiiny.site"]`).remove()
-						elem.remove(); 
-						break;
-				} else {
-						await wait(50);
-				}
-		}
-})()

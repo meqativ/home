@@ -1,83 +1,208 @@
-<html style="scroll-behavior: auto !important;"><head>
-    <meta http-equiv="Content-type" content="text/html; charset=utf-8">
-    <meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'unsafe-inline'; img-src data:; connect-src 'self'">
+<!D_OCTYPE html>
+<html lang="en">
+	<head>
+	  	<script preload defer src="./script.js"></script>
+    		<link preload href="https://fonts.googleapis.com/css2?family=Noto+Sans&family=Noto+Sans+Mono:wght@300&display=swap" rel="stylesheet">
+  		<link preload href="./assets/favicon.svg" rel="icon" type="image/svg+xml" />
+		<link preload href="style.css" rel="stylesheet" type="text/css" />
 		<meta property="og:title" content="meqativ"/>
 		<meta itemprop="image" property="og:image" content="https://meqativ.github.io/home/assets/avatar.png" />
     <meta content="origin" name="referrer">
     <meta name="theme-color" content="#8800ff" />
-		<meta name="color-scheme" content="light" />
+		<meta name="color-scheme" content="dark light" />
 		<meta name="viewport" content="height=device-height, width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
-    <title>Site found · MeqAtiv Homepages</title>
-    <style type="text/css" media="screen">
-      body {
-        background-color: #f1f1f1;
-        margin: 0;
-        font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-      }
+		<meta charset="utf-8" />
+		<title translate="no">meqativ</title>
+	</head>
+	<body>
+		<main>
+			<h6 id="lib_text">made with no libraries</h6>
+			<h1 class="title" translate="no">meqativ</h1>
+			<div class="pfp">
+				<img tabindex="0" class="avatar" alt="avatar" src="./assets/avatar.png"/>
+				<!--img class="overlay" alt="christmas overlay" src="./assets/jollyoverlay.png"/-->
+			</div>
+			<h3 tabindex="0" id="bio">
+				<span translate="no" id="ua_flag"><img draggable="false" alt="Ukrainian flag" src="./assets/ukrainian_flag.svg"/></span>Ukrainian born in 2007
+			</h3>
+			<h2 id="stuff_title" class="title">my stuff</h2>
+			<h3 id="js_warning">enable JavaScript for extended button functionality</h3>
+			<script>
+				document.querySelector("h3#js_warning").remove();
+        document.currentScript.remove();
+			</script>
+			<ul class="buttons">
+				<a href="https://github.com/meqativ/home">
+					<button id="src_btn" title="Source code of this page">
+						<div class="logo_container">
+							<picture>
+								<source srcset="./assets/github/white/logo.svg" media="(prefers-color-scheme: dark)"/>
+								<img draggable="false" src="./assets/github/black/logo.svg"/>
+							</picture>
+						</div>
+						<img id="code" draggable="false" src="./assets/github/code.svg" />
+						<h3 translate="yes">source code</h3>
+					</button>
+				</a>
+				<a href="https://youtube.com/@meqativ">
+					<button title="YouTube channel">
+						<div class="logo_container">
+							<img draggable="false" src="./assets/youtube/logo.svg" />
+						</div>
+						<h3 translate="no">youtube</h3>
+					</button>
+				</a>
+				<a href="https://odysee.com/@meqativ:9">
+					<button title="Odysee channel">
+						<div class="logo_container">
+							<img draggable="false" src="./assets/odysee/logo_2023.png" />
+						</div>
+						<h3 translate="no">odysee</h3>
+					</button>
+				</a>
+				<a href="https://twitch.com/meqativ">
+					<button title="Twitch account">
+						<div class="logo_container">
+							<img draggable="false" src="./assets/twitch/logo.svg" />
+						</div>
+						<h3 translate="no">twitch</h3>
+					</button>
+				</a>
+				<a href="https://twitter.com/meqativ">
+					<button title="Twitter account" id="x">
+						<div class="logo_container">
+							<img draggable="false" src="./assets/x/logo_old.png" />
+						</div>
+						<h3 translate="no"><span translate="no" id="strikethrough">twitter</span> x</h3>
+						<div translate="no" tabindex="0" role="button" title="Close button" aria-pressed="false" style="display: none;" class="logo_container pointer">
+							𝕏
+						</div>
+					</button>
+				</a>
+				<a href="https://discord.com/users/744276454946242723">
 
-      .container { margin: 50px auto 40px auto; width: 600px; text-align: center; }
-
-      a { color: #4183c4; text-decoration: none; }
-      a:hover { text-decoration: underline; }
-
-      h1 { width: 800px; position:relative; left: -100px; letter-spacing: -1px; line-height: 60px; font-size: 60px; font-weight: 100; margin: 0px 0 50px 0; text-shadow: 0 1px 0 #fff; }
-      p { color: rgba(0, 0, 0, 0.5); margin: 20px 0; line-height: 1.6; }
-
-      ul { list-style: none; margin: 25px 0; padding: 0; }
-      li { display: table-cell; font-weight: bold; width: 1%; }
-
-      .logo { display: inline-block; margin-top: 35px; }
-      .logo-img-2x { display: none; }
-      @media
-      only screen and (-webkit-min-device-pixel-ratio: 2),
-      only screen and (   min--moz-device-pixel-ratio: 2),
-      only screen and (     -o-min-device-pixel-ratio: 2/1),
-      only screen and (        min-device-pixel-ratio: 2),
-      only screen and (                min-resolution: 192dpi),
-      only screen and (                min-resolution: 2dppx) {
-        .logo-img-1x { display: none; }
-        .logo-img-2x { display: inline-block; }
-      }
-
-      #suggestions {
-        margin-top: 35px;
-        color: #ccc;
-      }
-      #suggestions a {
-        color: #666666;
-        font-weight: 200;
-        font-size: 14px;
-        margin: 0 10px;
-      }
-
-    </style>
-  </head>
-  <body style="scroll-behavior: auto !important;">
-
-    <div class="container">
-
-      <h1>423</h1>
-      <p><strong>That is my favorite number.</strong></p>
-
-      <p>
-        <a href="./index_old.html">The previous version of this site</a> has been deprecated due to a lack of funding.
-        Though, i'm <strong>meqativ</strong>, a 🇺🇦 Ukrainian human born in 2007
-      </p>
-
-      <div id="suggestions">
-        <a href="https://t.me/meqativ">@meqativ on Telegram</a> —
-        <a href="https://youtube.com/@meqativ">YouTube Channel</a> —
-        <a href="https://twitter.com/meqativ">@meqativ on X</a>
-      </div>
-
-      <a href="/" class="logo logo-img-1x">
-        <img width="32" height="32" title="" alt="" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyRpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoTWFjaW50b3NoKSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDpFMTZCRDY3REIzRjAxMUUyQUQzREIxQzRENUFFNUM5NiIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDpFMTZCRDY3RUIzRjAxMUUyQUQzREIxQzRENUFFNUM5NiI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOkUxNkJENjdCQjNGMDExRTJBRDNEQjFDNEQ1QUU1Qzk2IiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOkUxNkJENjdDQjNGMDExRTJBRDNEQjFDNEQ1QUU1Qzk2Ii8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+SM9MCAAAA+5JREFUeNrEV11Ik1EY3s4+ddOp29Q5b0opCgKFsoKoi5Kg6CIhuwi6zLJLoYLopq4qsKKgi4i6CYIoU/q5iDAKs6syoS76IRWtyJ+p7cdt7sf1PGOD+e0c3dygAx/67ZzzPM95/877GYdHRg3ZjMXFxepQKNS6sLCwJxqNNuFpiMfjVs4ZjUa/pmmjeD6VlJS8NpvNT4QQ7mxwjSsJiEQim/1+/9lgMHgIr5ohuxG1WCw9Vqv1clFR0dCqBODElV6v90ogEDjGdYbVjXhpaendioqK07CIR7ZAqE49PT09BPL2PMgTByQGsYiZlQD4uMXtdr+JxWINhgINYhGT2MsKgMrm2dnZXgRXhaHAg5jEJodUAHxux4LudHJE9RdEdA+i3Juz7bGHe4mhE9FNrgwBCLirMFV9Okh5eflFh8PR5nK5nDabrR2BNJlKO0T35+Li4n4+/J+/JQCxhmu5h3uJoXNHPbmWZAHMshWB8l5/ipqammaAf0zPDDx1ONV3vurdidqwAQL+pEc8sLcAe1CCvQ3YHxIW8Pl85xSWNC1hADDIv0rIE/o4J0k3kww4xSlwIhcq3EFFOm7KN/hUGOQkt0CFa5WpNJlMvxBEz/IVQAxg/ZRZl9wiHA63yDYieM7DnLP5CiAGsC7I5sgtYKJGWe2A8seFqgFJrJjEPY1Cn3pJ8/9W1e5VWsFDTEmFrBcoDhZJEQkXuhICMyKpjhahqN21hRYATKfUOlDmkygrR4o4C0VOLGJKrOITKB4jijzdXygBKixyC5TDQdnk/Pz8qRw6oOWGlsTKGOQW6OH6FBWsyePxdOXLTgxiyebILZCjz+GLgMIKnXNzc49YMlcRdHXcSwxFVgTInQhC9G33UhNoJLuqq6t345p9y3eUy8OTk5PjAHuI9uo4b07FBaOhsu0A4Unc+T1TU1Nj3KsSSE5yJ65jqF2DDd8QqWYmAZrIM2VlZTdnZmb6AbpdV9V6ec9znf5Q7HjYumdRE0JOp3MjitO4SFa+cZz8Umqe3TCbSLvdfkR/kWDdNQl5InuTcysOcpFT35ZrbBxx4p3JAHlZVVW1D/634VRt+FvLBgK/v5LV9WS+10xMTEwtRw7XvqOL+e2Q8V3AYIOIAXQ26/heWVnZCVfcyKHg2CBgTpmPmjYM8l24GyaUHyaIh7XwfR9ErE8qHoDfn2LTNAVC0HX6MFcBIP8Bi+6F6cdW/DICkANRfx99fEYFQ7Nph5i/uQiA214gno7K+guhaiKg9gC62+M8eR7XsBsYJ4ilam60Fb7r7uAj8wFyuwM1oIOWgfmDy6RXEEQzJMPe23DXrVS7rtyD3Df8z/FPgAEAzWU5Ku59ZAUAAAAASUVORK5CYII=">
-      </a>
-
-      <a href="/" class="logo logo-img-2x">
-        <img width="32" height="32" title="" alt="" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyRpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoTWFjaW50b3NoKSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDpEQUM1QkUxRUI0MUMxMUUyQUQzREIxQzRENUFFNUM5NiIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDpEQUM1QkUxRkI0MUMxMUUyQUQzREIxQzRENUFFNUM5NiI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOkUxNkJENjdGQjNGMDExRTJBRDNEQjFDNEQ1QUU1Qzk2IiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOkUxNkJENjgwQjNGMDExRTJBRDNEQjFDNEQ1QUU1Qzk2Ii8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+hfPRaQAAB6lJREFUeNrsW2mM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">
-      </a>
-    </div>
-  
-
-</body></html>
+					<button title="Discord user profile. Slow response time, even if you're able to send a message. preferably use telegram">
+						<div class="logo_container">
+							<picture>
+								<img draggable="false" src="./assets/discord/blurple/logo.svg" />
+							</picture>
+						</div>
+						<h3 translate="no">discord</h3>
+					</button>
+				</a>
+				<a href="https://last.fm/user/meqativ">
+					<button title="Last.fm profile">
+						<div class="logo_container">
+							<img draggable="false" src="./assets/last.fm/logo.png" />
+						</div>
+						<h3 translate="no">last.fm</h3>
+					</button>
+				</a>
+				<a href="https://rooflomg.newgrounds.com/">
+					<button title="Newgrounds page">
+						<div class="logo_container">
+							<img draggable="false" class="round" src="./assets/newgrounds/logo.png" />
+						</div>
+						<h3 translate="no">newgrounds</h3>
+					</button>
+				</a>
+				<a href="https://bandcamp.com/meqativ">
+					<button title="Bandcamp listener profile">
+						<div class="logo_container">
+							<picture>
+								<source draggable="false" srcset="./assets/bandcamp/aqua/logo.png" media="(prefers-color-scheme: dark)"/>
+								<img draggable="false" src="./assets/bandcamp/black/logo.png"/>
+							</picture>
+						</div>
+						<h3 style="text-transform: lowercase;" translate="no">bandcamp <span translate="yes">listener</span></h3>
+					</button>
+				</a>
+				<a href="https://github.com/meqativ">
+					<button title="Github account">
+						<div class="logo_container">
+							<picture>
+								<source srcset="./assets/github/white/logo.svg" media="(prefers-color-scheme: dark)"/>
+								<img draggable="false" src="./assets/github/black/logo.svg"/>
+							</picture>
+						</div>
+						<h3 translate="no">github</h3>
+					</button>
+				</a>
+				<a href="https://instagram.com/meqativ_">
+					<button title="Instagram profile. I dont use it often, it just exists.. Don't expect a reply from me there">
+						<div class="logo_container">
+							<img draggable="false" class="round" src="./assets/instagram/logo.svg" />
+						</div>
+						<h3 translate="no">instagram</h3>
+					</button>
+				</a>
+				<a href="https://lazer.ppy.sh/users/33649721/mania">
+					<button title="Osu player profile">
+						<div class="logo_container">
+							<img draggable="false" class="round" src="./assets/osu/logo.png" />
+						</div>
+						<h3 translate="no">osu!profile</h3>
+					</button>
+				</a>
+				<a href="https://gdbrowser.com/u/meqativ">
+					<button id="fireinthehole" title="Geometry Dash account on GD Browser">
+						<div class="logo_container">
+							<img draggable="false" class="round" src="./assets/gd/logo_2.1.png" />
+						</div>
+						<h3 translate="no">geometry dash</h3>
+					</button>
+				</a>
+				<a href="https://nebo.mobi/tower/id/20284549">
+					<button title="Небоскрёб в игре Небоскрёбы">
+						<div class="logo_container">
+							<img draggable="false" class="round" src="./assets/nebosrkeby/logo.png" />
+						</div>
+						<h3 translate="no">небоскрёбы</h3>
+					</button>
+				</a>
+				<button title="OnlyFans page" id="onlyfans" style="display: none;">
+					<div class="logo_container">
+						<img draggable="false" src="./assets/onlyfans/blue/logo.svg" />
+					</div>
+					<h3 translate="no">onlyfans</h3>
+				</button>
+				<a href="https://t.me/paketmeqa/1482">
+					<button id="tg" title="Telegram channel">
+						<div class="logo_container">
+							<img draggable="false" src="./assets/telegram/logo.svg" />
+						</div>
+						<h3 translate="no" style="width: 100%; opacity: 1;">telegram</h3>
+						<h3 style="width: 0px; opacity: 0; text-align: center; font-size: 0px;">channel</h3>
+						<div aria-label="Expand buttons below" tabindex="0" role="button" aria-pressed="false" style="display: none; transform: rotate(0turn);" class="logo_container pointer"><</div>
+					</button>
+				</a>
+				<div closed="true" style="display: none;" class="telegram-btns">
+					<button title="Telegram profile" disabled onclick="window.open(`https://t.me/meqativ`)">
+						<h3>profile</h3>
+						<div class="logo_container">
+							<img draggable="false" class="round" src="./assets/avatar.png" />
+						</div>
+					</button>
+					<button title="Telegram language pack" disabled onclick="window.open(`https://t.me/setlanguage/meqalang`)">
+						<h3>language</h3>
+						<div class="logo_container">
+							<img draggable="false" src="./assets/telegram/language/purple.png" />
+						</div>
+					</button>
+					<button title="Telegram theme" disabled onclick="window.open(`https://t.me/addtheme/meqadark`)">
+						<h3>theme</h3>
+						<div class="logo_container">
+							<img draggable="false" src="./assets/telegram/theme.png" /> <!--- i wish i knew how to make svgs --->
+						</div>
+					</button>
+					<button title="Telegram emoji pack" disabled onclick="window.open(`https://t.me/addemoji/meqamojis`)">
+						<h3 translate="yes">emojis</h3>
+						<div class="logo_container">
+							<img draggable="false" class="round" src="./assets/telegram/emoji.png" />
+						</div>
+					</button>
+				</div>
+			</ul>
+		</main>
+	</body>
+</html>

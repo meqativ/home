@@ -124,7 +124,7 @@ const age = document.querySelector("span#age"),
 onlyfans_btn = document.querySelector("button#onlyfans"),
 btns = document.querySelector(".buttons");
 
-if (age < 21) { // nvm
+if (age.innerText < 21) { // nvm
 	let last, font_size = 2;
 onlyfans_btn.style.display = "";// show if js enabled
 onlyfans_btn.addEventListener("click", () => {

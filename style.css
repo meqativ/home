@@ -1,4 +1,5 @@
 @import url("./modules/scrollbars.css");
+
 img {
 	max-width: 100%;
 	height: auto;
@@ -8,58 +9,79 @@ img {
 	background-size: cover;
 	shape-margin: .75rem;
 }
+
 :root {
 	--scrollbar-width: .8rem;
 	--scrollbar-track-base: transparent;
+
+	--accent-rgb: 0, 102, 255;
+	/*rgb(102, 0, 255)*/
 }
+
 body {
 	padding-bottom: 5rem;
 }
+
 @media (prefers-color-scheme: dark) {
 	img#code {
 		filter: invert(1);
 	}
+
 	body {
 		background-color: #000;
 	}
+
 	:root {
 		--scrollbar-thumb-base: hsl(0, 0%, 25%, .6);
 		--scrollbar-thumb-hover: hsl(0, 0%, 25%, .8);
 	}
 }
+
 @media (prefers-color-scheme: light) {
-  :root {
+	:root {
 		--scrollbar-thumb-base: hsl(0, 0%, 75%, .6);
 		--scrollbar-thumb-hover: hsl(0, 0%, 75%, .8);
 	}
 }
+
 @keyframes look {
-	0%, 100% {
+
+	0%,
+	100% {
 		border-color: transparent;
 	}
-	20%, 80% {
-		border: 1rem solid rgba(125, 0, 255, .9);
+
+	20%,
+	80% {
+		border: 1rem solid rgba(var(--accent-rgb), .9);
 	}
 }
+
 img#code {
 	width: 1rem;
 }
+
 #lib_text {
 	text-align: center;
 	opacity: .2;
 }
+
 #lib_text::selection {
-	background: rgba(125, 0, 255, 1);
+	background: rgba(var(--accent-rgb), 1);
 }
+
 .pointer {
 	cursor: pointer;
 }
+
 ::selection {
-	background: rgba(125, 0, 255, .2);
+	background: rgba(var(--accent-rgb), .2);
 }
+
 img {
 	user-select: none;
 }
+
 .title {
 	margin-top: 3%;
 }
@@ -71,13 +93,17 @@ img {
 	margin: 0;
 	padding: 0;
 }
+
+/* funny google chrome translation shitcode */
 font {
 	transition: font-size 0s;
-} /* funny google chrome translation shitcode */
+}
+
 *:focus-visible {
-	outline: .2rem solid #8800ff;
+	outline: .2rem solid rgb(var(--accent-rgb));
 	outline-offset: .2rem;
 }
+
 main {
 	display: flex;
 	justify-content: center;
@@ -90,15 +116,19 @@ h3#js_warning {
 	color: yellow;
 	text-align: center;
 }
-button, .buttons #tg div.pointer {
+
+button,
+.buttons #tg div.pointer {
 	background: none transparent;
-	background-color: #4400ff22;
-	border: #4400ff solid 1px;
+	background-color: rgba(var(--accent-rgb), 0.133);
+	border: rgb(var(--accent-rgb)) solid 1px;
 	border-radius: 0.5rem;
 }
+
 button:hover {
 	scale: 1.05;
 }
+
 button:focus {
 	scale: 1.1;
 }
@@ -112,7 +142,10 @@ button:focus {
 	padding: .5rem;
 	gap: .3rem;
 }
-.buttons > button, .buttons > a button, .buttons > a {
+
+.buttons>button,
+.buttons>a button,
+.buttons>a {
 	gap: .5rem;
 	padding: .5rem;
 	white-space: normal;
@@ -124,10 +157,12 @@ button:focus {
 	align-items: center;
 	width: min(100%, 18rem);
 }
-.buttons > a {
+
+.buttons>a {
 	padding: unset;
 }
-.buttons > div.telegram-btns {
+
+.buttons>div.telegram-btns {
 	scroll-padding-bottom: 2rem;
 	display: flex;
 	flex-direction: row;
@@ -138,9 +173,11 @@ button:focus {
 	max-height: 0;
 	transition: all 0.5s ease;
 }
+
 .buttons #tg {
 	justify-content: space-between;
 }
+
 .buttons #tg div.pointer {
 	font-size: 2.5rem;
 	height: 100%;
@@ -151,11 +188,13 @@ button:focus {
 	padding-bottom: 0.1rem;
 	padding-right: 0.1rem;
 }
-#x > h3 {
+
+#x>h3 {
 	width: 100%;
 	text-align: start;
 }
-#x > div.pointer {
+
+#x>div.pointer {
 	font-size: 1.5rem;
 	align-self: flex-start;
 	height: 1rem;
@@ -163,11 +202,13 @@ button:focus {
 	min-width: unset;
 	min-height: unset;
 }
+
 .buttons a button h3 {
 	text-align: start;
 	width: 100%;
 	cursor: pointer;
 }
+
 div.telegram-btns {
 	display: flex;
 	flex-direction: row;
@@ -176,16 +217,27 @@ div.telegram-btns {
 	align-items: flex-start;
 	transition: max-height ease-in .25s;
 }
+
 div.telegram-btns[closed="false"] {
 	max-height: 5rem;
 	height: 5rem;
-	& button { padding-top: .5rem; padding-bottom: .5rem; }
+
+	& button {
+		padding-top: .5rem;
+		padding-bottom: .5rem;
+	}
 }
+
 div.telegram-btns[closed="true"] {
-	& button { padding-top: 0px; padding-bottom: 0px; }
+	& button {
+		padding-top: 0px;
+		padding-bottom: 0px;
+	}
+
 	max-height: 0px;
 	height: 0px;
 }
+
 div.telegram-btns button {
 	gap: .5rem;
 	padding: .5rem;
@@ -194,34 +246,43 @@ div.telegram-btns button {
 	width: fit-content;
 	cursor: pointer;
 }
+
 div.telegram-btns button:disabled {
 	cursor: default;
-}       
+}
 
-button:disabled div.logo_container  {
+button:disabled div.logo_container {
 	opacity: 1;
 }
+
 button:disabled div.logo_container {
 	opacity: 0;
 }
+
 div.logo_container {
 	height: min(100%, 3rem);
 	max-height: 3rem;
 	min-width: 2rem;
-  display: flex;
+	display: flex;
 	flex-direction: row;
 	gap: .25rem;
 	align-items: center;
 	justify-content: space-evenly;
 }
+
 div.logo_container img.round {
 	border-radius: 18%;
 }
+
 img.fold {
-	-webkit-user-select: none; /* disable selection/copy of UIWebView */
-	-webkit-touch-callout: none; /* disable the popup when long-pressing on a link */
+	user-select: none;
+	-webkit-user-select: none;
+	/* disable selection/copy of UIWebView */
+	-webkit-touch-callout: none;
+	/* disable the popup when long-pressing on a link */
 }
-div.logo_container img, 
+
+div.logo_container img,
 div.logo_container picture {
 	max-width: 2rem;
 	height: min(100%, 2rem);
@@ -238,9 +299,11 @@ div.logo_container picture {
 	-khtml-border-radius: 15%;
 	display: grid;
 	transition: scale ease-in-out .5s;
-}	
-.pfp > img {
-	border-radius: inherit;
+}
+
+.pfp>usvg>img,
+.pfp>svg {
+	border-radius: unset;
 	object-fit: contain;
 	width: min(100%, 10rem);
 	height: 10rem;
@@ -249,16 +312,23 @@ div.logo_container picture {
 	grid-row: 1;
 	z-index: 1;
 }
-.pfp:hover, .pfp:focus {
+
+.pfp img:hover,
+.pfp:focus img,
+.pfp:has(>svg>g#object-2 path:hover),
+.pfp:has(>svg>g#object-2 path):focus {
 	scale: 1.8;
 }
+
 span#age {
 	border-radius: 100%;
 	box-sizing: content-box;
 }
+
 span#strikethrough {
 	text-decoration: line-through;
 }
+
 span#ua_flag img {
 	background-color: transparent;
 	user-select: none;

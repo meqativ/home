@@ -1,18 +1,5 @@
 @import url("./modules/scrollbars.css");
 
-button:nth-child(4n-2) {
-	--accent-rgb: 255, 255, 0;
-}
-button:nth-child(4n-1) {
-	--accent-rgb: 0, 255, 0;
-}
-button:nth-child(4n) {
-	--accent-rgb: 0, 0, 255;
-}
-button:nth-child(4n+1) {
-	--accent-rgb: 255, 0, 255;
-}
-
 img {
 	max-width: 100%;
 	height: auto;
@@ -136,6 +123,7 @@ button,
 	background-color: rgba(var(--accent-rgb), 0.133);
 	border: rgb(var(--accent-rgb)) solid 1px;
 	border-radius: 0.5rem;
+	cursor: pointer;
 }
 
 button:hover {

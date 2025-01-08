@@ -48,9 +48,9 @@ tg_btn_arrow.style.display = ""; // show if js enabled
 tg_btns.style.display = ""; // show if js enabled
 
 
-
+// there is probably alot of redundant stuff left but                    
 tg_btn.addEventListener("click", (e) => {
-	if (!tg_btn_arrow.matches(":hover, :focus")) return window.open(`https://t.me/paketmeqa`);
+	if (!tg_btn_arrow.matches(":hover, :focus")) return window.open(`https://t.me/meqativ`);
 	absorbEvent(e);
 	if /* close the fold */ (tg_btns.getAttribute("closed") === "false") {
 		tg_btn_arrow.style.transform = "rotate(0turn)";

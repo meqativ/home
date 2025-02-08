@@ -67,7 +67,7 @@ img#code {
 }
 
 #lib_text::selection {
-	background: rgba(var(--accent-rgb), 1);
+	background: rgba(var(--accent-rgb), .6);
 }
 
 .pointer {

@@ -125,15 +125,16 @@ button,
 	border-radius: 0.5rem;
 	border-width: 0;
 	cursor: pointer;
-	transition-delay: 0.1s, 0.1s, 0.1s, 0.02s;
+	transition-delay: 0.1s, 0.1s, 0.1s, 0.02s, 0.25s, 0.25s;
 	transition-timing-function: ease-out;
-	transition-property: outline-color, outline-width, background-color, scale;
+	transition-property: outline-color, outline-width, background-color, scale, height, opacity;
 }
 button:hover, button:focus {
 	outline: rgba(var(--accent-rgb), 0.8) solid 0.4rem;
 	background-color: rgba(var(--accent-rgb), 0.1);
-	transition: none !important;
-	transition-delay: none !important;
+	transition-delay: 0.25s, 0.25s !important;
+	transition-property: height, opacity !important;
+	transition-timing-function: ease-in;
 }
 
 button:focus {

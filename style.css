@@ -120,18 +120,26 @@ h3#js_warning {
 button,
 .buttons #tg div.pointer {
 	background: none transparent;
-	background-color: rgba(var(--accent-rgb), 0.133);
-	border: rgb(var(--accent-rgb)) solid 1px;
+	background-color: rgba(var(--accent-rgb), 0.05);
+	outline: rgba(var(--accent-rgb), 1) solid 1px;
 	border-radius: 0.5rem;
+	border-width: 0;
 	cursor: pointer;
+	transition-delay: 0.1s, 0.1s, 0.1s, 0.02s;
+	transition-timing-function: ease-out;
+	transition-property: outline-color, outline-width, background-color, scale;
 }
-
-button:hover {
-	scale: 1.05;
+button:hover, button:focus {
+	outline: rgba(var(--accent-rgb), 0.8) solid 0.4rem;
+	background-color: rgba(var(--accent-rgb), 0.1);
+	transition: none !important;
+	transition-delay: none !important;
 }
 
 button:focus {
 	scale: 1.1;
+	transition: none !important;
+	transition-delay: none !important;
 }
 
 .buttons {
@@ -182,10 +190,8 @@ button:focus {
 .buttons #tg div.pointer {
 	font-size: 2.5rem;
 	height: 100%;
-	aspect-ratio: 1/1;
-
-	background-color: black;
-	border-radius: 2rem;
+	background-color: unset;
+	border-radius: 423423423423423423px;
 	padding-bottom: 0.1rem;
 	padding-right: 0.1rem;
 }

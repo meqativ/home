@@ -13,7 +13,7 @@ img {
 :root {
 	--scrollbar-width: .8rem;
 	--scrollbar-track-base: transparent;
-	--accent-rgb: 58, 255, 0;
+	--accent-rgb: 127, 255, 0;
 	/*rgb(102, 0, 255)*/
 }
 

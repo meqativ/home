@@ -120,36 +120,6 @@ with (lib_text) {
 	document.addEventListener("keyup", lib_text_enter_handle);
 }
 
-const age = document.querySelector("span#age"),
-	onlyfans_btn = document.querySelector("button#onlyfans"),
-	btns = document.querySelector(".buttons");
-
-if (age.innerText <= 18) { // nvm
-	let last, font_size = 2;
-	onlyfans_btn.style.display = "";// show if js enabled
-	onlyfans_btn.addEventListener("click", () => {
-		if (last) clearTimeout(last);
-		if (age) updateAge(age);
-		if (!age || age.innerText == 18) return window.open("https://media.tenor.com/iHAv4WoNo2kAAAAC/gotcha-bitch.gif");
-		scrollIntoView(age);
-		if (font_size < 8) return (age.style = `font-size: ${(font_size *= 4)}rem;`);
-		age.style.animation = "look 2s";
-		age.addEventListener(
-			"animationend",
-			() => {
-				age.style.animation = ""
-			},
-			{ once: true }
-		);
-
-		// revert to normal font size
-		last = setTimeout(() => {
-			font_size = 1;
-			age.style = "";
-			last = undefined;
-		}, 10 * 1000);
-	});
-}
 const usvgs = document.querySelectorAll('usvg');
 
 usvgs.forEach(async (usvg) => {

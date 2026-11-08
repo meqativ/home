@@ -1,3 +1,14 @@
+(async () => {
+	if (window.location.hostname === "https://meqa.dev") return;
+
+	try {
+		// only redirect if it's working lo
+		if ((await fetch("https://meqa.dev", { method: 'HEAD', cache: 'no-cache' })).ok) {
+			window.location.replace(`https://meqa.dev${window.location.pathname}${window.location.search}`);
+		}
+	} catch (_) {}
+})();
+
 const createEnterHandle = (element) => (e) => { if ((e.keyCode ? e.keyCode : e.which) == '13' && document.activeElement === element) document.activeElement.click(e); }
 const wait = (ms) => new Promise(res => setTimeout(res, ms));
 const scrollIntoView = (el) => el["scrollIntoViewIfNeeded" in el ? "scrollIntoViewIfNeeded" : "scrollIntoView"]({ behavior: "smooth", block: "start" });

@@ -1,5 +1,5 @@
 (async () => {
-	if (window.location.hostname === "https://meqa.dev") return;
+	if (window.location.hostname === "meqa.dev") return;
 
 	try {
 		// only redirect if it's working lo

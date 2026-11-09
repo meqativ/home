@@ -1,10 +1,8 @@
 (async () => {
 	if (window.location.hostname === "meqa.dev") return;
-
 	try {
-		// only redirect if it's working lo
 		if ((await fetch("https://meqa.dev", { method: 'HEAD', cache: 'no-cache' })).ok) {
-			window.location.replace(`https://meqa.dev${window.location.pathname}${window.location.search}`);
+			window.location.replace(`https://meqa.dev`);
 		}
 	} catch (_) {}
 })();
